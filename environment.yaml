@@ -1,0 +1,14 @@
+name: ghost_env
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pytorch
+  - torchvision
+  - pytorch-cuda=12.1
+  - pandas
+  - numpy
+  - scikit-learn
