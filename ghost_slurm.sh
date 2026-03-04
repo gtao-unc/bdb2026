@@ -29,10 +29,9 @@ echo "Working dir   : $PWD"
 echo "Start time    : $(date)"
 echo "=============================================="
 
-# --- Environment setup ---
-# Load conda and activate the project environment
-source "$(conda info --base)/etc/profile.d/conda.sh"
-conda activate ridenv
+# Environment
+module load cuda/12.1
+PYTHON_ENV="/nas/longleaf/home/gtao/.conda/envs/ghost/bin/python"
 
 # Confirm GPU visibility
 echo ""
@@ -47,7 +46,7 @@ mkdir -p dataset/pretrained
 
 # --- Run the pipeline ---
 echo "--- Starting ghost.py ---"
-python ghost.py
+$PYTHON_ENV ghost.py
 
 echo ""
 echo "=============================================="

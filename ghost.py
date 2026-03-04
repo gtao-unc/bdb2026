@@ -50,8 +50,9 @@ BATCH_SIZE = 64
 LEARNING_RATE = 1e-4
 
 # File paths
-PROCESSED_DATA_PATH = Path('dataset/processed/processed_data.pt')
-PRETRAINED_WEIGHTS_PATH = Path('dataset/pretrained/best_heliocentricity_model.pt')
+DATA_FOLDER_PATH = Path('dataset')
+PROCESSED_DATA_PATH = DATA_FOLDER_PATH / Path('processed/processed_data.pt')
+PRETRAINED_WEIGHTS_PATH = DATA_FOLDER_PATH / Path('pretrained/best_heliocentricity_model.pt')
 
 
 # === Data Preprocessing Functions ===
